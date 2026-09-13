@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>黄思奇 &amp; 刘帆 · 婚礼邀请函</title>
+<meta name="theme-color" content="#5E0A11">
+<meta name="description" content="2026年10月11日（星期日）午宴 · 湖南岳阳 泰和酒店 三宴会厅。诚邀您见证我们的幸福时刻。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="黄思奇 &amp; 刘帆 · 婚礼邀请函">
+<meta property="og:description" content="2026年10月11日（星期日）午宴 · 湖南岳阳 泰和酒店 三宴会厅">
+<meta property="og:url" content="https://yangzhishiyi-d9g80h7wq6e33b58e-1356123763.tcloudbaseapp.com/">
+<meta property="og:site_name" content="黄思奇 &amp; 刘帆 婚礼邀请函">
+<meta property="og:image" content="https://yangzhishiyi-d9g80h7wq6e33b58e-1356123763.tcloudbaseapp.com/assets/share.jpg">
+<meta property="og:image:width" content="800">
+<meta property="og:image:height" content="800">
+<!--
+  ============================================================
+  电子婚礼请柬  |  中式典雅风
+  ------------------------------------------------------------
+  【需要替换的信息】
+  1. 酒店名称 + 详细地址      -> 搜索 "HOTEL_NAME" / "HOTEL_ADDR"
+  2. 导航链接                 -> 已接高德「泰和酒店·岳阳」，如需精确到门店可替换 href
+  3. 照片（5 张）             -> assets/photo-1 ~ photo-5.jpg，换图直接覆盖同名文件
+  4. 农历日期（如需补充）     -> 搜索 "LUNAR_DATE"
+  5. 封面背景图               -> assets/photo-4.jpg（见 CSS .cover）
+  6. 新人头像                 -> assets/groom.jpg / assets/bride.jpg
+  ============================================================
+-->
+<style>
+:root{
+  --red-900:#5E0A11;
+  --red-800:#7A0F1A;
+  --red-700:#96172A;
+  --red-600:#B21F35;
+  --gold:#C9A961;
+  --gold-lt:#E8D2A0;
+  --gold-dk:#9C7C3A;
+  --cream:#FCF8F2;
+  --cream-2:#F5EDE2;
+  --ink:#3B2A20;
+  --ink-2:#6B5849;
+  --line:rgba(201,169,97,.45);
+  --serif:"Songti SC","STSong","SimSun","Noto Serif SC",Georgia,serif;
+  --kai:"Kaiti SC","STKaiti","KaiTi","Songti SC",serif;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+html,body{background:#EAE0D2;font-family:var(--serif);color:var(--ink);}
+body{-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+
+/* ---------- 外框：手机宽度，居中，桌面端两侧留白 ---------- */
+.stage{
+  max-width:480px;margin:0 auto;background:var(--cream);
+  min-height:100vh;position:relative;overflow:hidden;
+  box-shadow:0 0 60px rgba(90,60,30,.18);
+}
+
+/* ============================================================
+   一、开场遮罩层
+   ============================================================ */
+.veil{
+  position:fixed;inset:0;z-index:99;
+  max-width:480px;margin:0 auto;
+  background:
+    radial-gradient(circle at 50% 32%, rgba(255,225,170,.16) 0%, transparent 62%),
+    repeating-linear-gradient(115deg, rgba(255,255,255,.022) 0 1px, transparent 1px 9px),
+    linear-gradient(160deg,#7A0F1A 0%,#5E0A11 58%,#460710 100%);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  transition:transform 1s cubic-bezier(.76,0,.24,1),opacity .5s ease .5s;
+}
+.veil.up{transform:translateY(-101%);opacity:.4;}
+.veil::before,.veil::after{
+  content:"";position:absolute;left:50%;transform:translateX(-50%);
+  width:min(78%,300px);height:1px;background:linear-gradient(90deg,transparent,var(--line),transparent);
+}
+.veil::before{top:12%;}
+.veil::after{bottom:16%;}
+
+.veil-frame{
+  position:absolute;inset:22px;border:1px solid rgba(201,169,97,.28);
+  pointer-events:none;
+}
+.veil-frame span{position:absolute;width:16px;height:16px;border:0 solid var(--gold);}
+.veil-frame span:nth-child(1){top:-1px;left:-1px;border-top-width:2px;border-left-width:2px;}
+.veil-frame span:nth-child(2){top:-1px;right:-1px;border-top-width:2px;border-right-width:2px;}
+.veil-frame span:nth-child(3){bottom:-1px;left:-1px;border-bottom-width:2px;border-left-width:2px;}
+.veil-frame span:nth-child(4){bottom:-1px;right:-1px;border-bottom-width:2px;border-right-width:2px;}
+
+.veil-inner{text-align:center;position:relative;z-index:2;padding:0 30px;}
+.xi{
+  font-family:var(--serif);font-size:74px;line-height:1;
+  color:transparent;
+  background:linear-gradient(175deg,#F3E0B0 8%,#C9A961 46%,#A5822F 78%,#E8D2A0 100%);
+  -webkit-background-clip:text;background-clip:text;
+  letter-spacing:2px;
+  filter:drop-shadow(0 2px 6px rgba(0,0,0,.35));
+}
+.veil-sub{
+  margin-top:26px;font-family:var(--kai);
+  font-size:13px;letter-spacing:.55em;text-indent:.55em;
+  color:rgba(232,210,160,.82);
+}
+.veil-date{
+  margin-top:14px;font-size:11px;letter-spacing:.34em;text-indent:.34em;
+  color:rgba(232,210,160,.5);
+}
+.open-btn{
+  margin-top:52px;display:inline-flex;align-items:center;gap:9px;
+  padding:13px 34px;
+  border:1px solid rgba(201,169,97,.7);border-radius:999px;
+  background:rgba(201,169,97,.07);
+  color:var(--gold-lt);font-family:var(--serif);font-size:14px;
+  letter-spacing:.3em;text-indent:.3em;cursor:pointer;
+  animation:breathe 2.6s ease-in-out infinite;
+  transition:background .3s;
+}
+.open-btn:active{background:rgba(201,169,97,.2);animation:none;}
+@keyframes breathe{
+  0%,100%{box-shadow:0 0 0 0 rgba(201,169,97,.32);}
+  50%{box-shadow:0 0 0 12px rgba(201,169,97,0);}
+}
+
+/* ============================================================
+   二、封面
+   ============================================================ */
+.cover{
+  position:relative;min-height:100svh;
+  background:#5E0A11 url("assets/photo-4.jpg") center center / cover no-repeat;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  overflow:hidden;padding:74px 26px 60px;
+}
+.cover::before{
+  content:"";position:absolute;inset:0;z-index:1;
+  background:
+    radial-gradient(ellipse at 50% 44%, rgba(158,26,48,.30) 0%, rgba(94,10,17,.72) 58%, rgba(54,6,13,.93) 100%),
+    linear-gradient(180deg, rgba(64,7,15,.82) 0%, rgba(104,13,24,.50) 34%, rgba(72,8,17,.60) 68%, rgba(48,5,12,.92) 100%);
+}
+.cover-glyph{
+  position:absolute;z-index:2;font-family:var(--serif);color:rgba(201,169,97,.07);
+  font-size:230px;line-height:1;user-select:none;pointer-events:none;
+}
+.cover-glyph.g1{top:50%;left:50%;transform:translate(-50%,-50%);}
+.cover-ring{
+  position:absolute;z-index:2;border-radius:50%;border:1px solid rgba(201,169,97,.16);
+  pointer-events:none;
+}
+.cover-ring.r1{width:340px;height:340px;top:50%;left:50%;transform:translate(-50%,-50%);}
+.cover-ring.r2{width:450px;height:450px;top:50%;left:50%;transform:translate(-50%,-50%);border-color:rgba(201,169,97,.07);}
+
+.cover-content{position:relative;z-index:3;text-align:center;width:100%;}
+.eyebrow{
+  font-family:var(--kai);font-size:12px;letter-spacing:.5em;text-indent:.5em;
+  color:rgba(232,210,160,.72);margin-bottom:30px;
+}
+.names{display:flex;align-items:center;justify-content:center;gap:14px;}
+.names .nm{
+  font-size:38px;letter-spacing:.1em;text-indent:.1em;color:#FBF3E2;
+  text-shadow:0 2px 14px rgba(0,0,0,.3);white-space:nowrap;
+}
+.names .amp{
+  font-size:20px;color:var(--gold);opacity:.9;
+  font-family:Georgia,serif;padding-bottom:4px;
+}
+.cover-rule{
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  margin:26px 0 22px;
+}
+.cover-rule i{display:block;width:46px;height:1px;background:linear-gradient(90deg,transparent,var(--gold));}
+.cover-rule i:last-child{background:linear-gradient(90deg,var(--gold),transparent);}
+.cover-rule b{
+  width:5px;height:5px;background:var(--gold);transform:rotate(45deg);display:block;
+}
+.cover-date{
+  font-family:Georgia,var(--serif);font-size:19px;letter-spacing:.3em;text-indent:.3em;
+  color:var(--gold-lt);
+}
+.cover-lunar{
+  margin-top:11px;font-family:var(--kai);font-size:12px;
+  letter-spacing:.24em;text-indent:.24em;color:rgba(232,210,160,.6);
+}
+.cover-venue{
+  margin-top:22px;padding-top:17px;position:relative;
+  font-family:var(--kai);font-size:12.5px;
+  letter-spacing:.2em;text-indent:.2em;color:rgba(232,210,160,.8);
+}
+.cover-venue::before{
+  content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);
+  width:26px;height:1px;background:rgba(201,169,97,.55);
+}
+.scroll-hint{
+  position:absolute;bottom:34px;left:50%;transform:translateX(-50%);
+  display:flex;flex-direction:column;align-items:center;gap:9px;z-index:3;
+}
+.scroll-hint span{
+  font-size:10px;letter-spacing:.36em;text-indent:.36em;
+  color:rgba(232,210,160,.5);
+}
+.scroll-hint i{
+  width:1px;height:34px;
+  background:linear-gradient(180deg,rgba(201,169,97,.75),transparent);
+  animation:drop 2s ease-in-out infinite;
+}
+@keyframes drop{
+  0%{opacity:0;transform:translateY(-10px);}
+  40%{opacity:1;}
+  100%{opacity:0;transform:translateY(10px);}
+}
+
+/* ============================================================
+   二·五、婚礼动画影片（封面下滑后自动播放）
+   ============================================================ */
+.filmic{
+  position:relative;background:#070A1C;overflow:hidden;line-height:0;
+}
+.filmic video{
+  display:block;width:100%;height:100svh;object-fit:cover;
+}
+.filmic::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:170px;z-index:2;pointer-events:none;
+  background:linear-gradient(180deg,rgba(66,7,15,.92) 0%,rgba(40,10,44,.3) 58%,transparent 100%);
+}
+.filmic::after{
+  content:"";position:absolute;left:0;right:0;bottom:0;height:150px;z-index:2;pointer-events:none;
+  background:linear-gradient(180deg,transparent,rgba(7,10,28,.9));
+}
+.filmic .snd{
+  position:absolute;right:16px;bottom:20px;z-index:5;width:46px;height:46px;padding:0;
+  border-radius:50%;border:1px solid rgba(201,169,97,.55);
+  background:rgba(8,12,32,.52);
+  -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
+  display:flex;align-items:center;justify-content:center;cursor:pointer;
+  animation:sndPulse 2.8s ease-in-out infinite;
+}
+.filmic .snd svg{width:22px;height:22px;fill:#F0DFAE;stroke:#F0DFAE;stroke-width:1.8;fill-rule:evenodd;}
+.filmic .snd .on{display:none;}
+.filmic .snd.on .on{display:block;}
+.filmic .snd.on .off{display:none;}
+@keyframes sndPulse{0%,100%{box-shadow:0 0 0 0 rgba(201,169,97,.42);}50%{box-shadow:0 0 0 11px rgba(201,169,97,0);}}
+/* 自动播放被拦截时的兜底按钮 */
+.filmic .film-play{
+  position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:6;
+  display:none;flex-direction:column;align-items:center;gap:14px;
+  background:transparent;border:0;padding:0;cursor:pointer;
+  color:#F6E7BE;font-family:var(--serif);font-size:12px;letter-spacing:.26em;text-indent:.26em;
+  text-shadow:0 0 14px rgba(0,0,0,.8);
+}
+.filmic.failed .film-play{display:flex;}
+.film-play i{
+  width:78px;height:78px;border-radius:50%;
+  border:1px solid rgba(201,169,97,.8);background:rgba(10,14,38,.5);
+  -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
+  display:flex;align-items:center;justify-content:center;
+  animation:sndPulse 2.6s ease-in-out infinite;
+}
+.film-play svg{width:26px;height:26px;fill:#F6E7BE;margin-left:4px;}
+
+/* ============================================================
+   三、通用区块
+   ============================================================ */
+.sec{padding:64px 30px;position:relative;}
+.sec.cream{background:var(--cream);}
+.sec.tint{background:var(--cream-2);}
+
+.sec-title{text-align:center;margin-bottom:34px;}
+.sec-title .cn{
+  font-size:21px;letter-spacing:.34em;text-indent:.34em;color:var(--red-800);
+}
+.sec-title .en{
+  margin-top:9px;font-family:Georgia,serif;font-size:10px;
+  letter-spacing:.32em;text-indent:.32em;color:var(--gold-dk);opacity:.75;
+}
+.sec-title .deco{
+  display:flex;align-items:center;justify-content:center;gap:9px;margin-top:14px;
+}
+.sec-title .deco i{width:26px;height:1px;background:var(--line);display:block;}
+.sec-title .deco b{width:4px;height:4px;background:var(--gold);transform:rotate(45deg);display:block;}
+
+/* ---------- 邀请语 ---------- */
+.invite-text{
+  font-family:var(--kai);font-size:15.5px;line-height:2.15;
+  color:var(--ink);text-align:justify;letter-spacing:.04em;
+}
+.invite-text .hl{color:var(--red-700);}
+.invite-text .who{
+  display:block;margin-bottom:14px;font-size:16px;color:var(--red-800);
+}
+.quote{
+  margin-top:30px;padding:22px 20px;
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  font-family:var(--kai);font-size:14px;line-height:2;
+  color:var(--ink-2);text-align:center;letter-spacing:.06em;
+}
+
+/* ---------- 新人 ---------- */
+.couple{display:flex;flex-direction:column;gap:18px;}
+.person{
+  display:flex;align-items:center;gap:18px;
+  padding:20px;background:#fff;
+  border:1px solid rgba(201,169,97,.32);
+  border-radius:3px;position:relative;
+}
+.person::before{
+  content:"";position:absolute;top:0;left:0;width:3px;height:100%;
+  background:linear-gradient(180deg,var(--red-700),var(--red-900));
+}
+.avatar{
+  width:72px;height:72px;border-radius:50%;flex:0 0 72px;
+  overflow:hidden;position:relative;background:#E7D9C5;
+  border:1px solid rgba(201,169,97,.55);
+  box-shadow:0 0 0 3px #fff, 0 0 0 4px rgba(201,169,97,.24);
+  margin-left:2px;
+}
+.avatar img{display:block;width:100%;height:100%;object-fit:cover;}
+.person{padding:20px 20px 20px 24px;}
+.person-info .role{
+  font-size:11px;letter-spacing:.28em;text-indent:.28em;
+  color:var(--gold-dk);margin-bottom:7px;
+}
+.person-info .nm{
+  font-size:22px;letter-spacing:.14em;color:var(--red-800);
+}
+.person-info{flex:1;min-width:0;}
+
+/* ---------- 时间 / 地点 ---------- */
+.card{
+  background:#fff;border:1px solid rgba(201,169,97,.32);
+  border-radius:3px;padding:28px 24px;position:relative;text-align:center;
+}
+.card + .card{margin-top:16px;}
+.card::after{
+  content:"";position:absolute;inset:6px;border:1px solid rgba(201,169,97,.14);
+  pointer-events:none;border-radius:2px;
+}
+.big-date{
+  font-family:Georgia,var(--serif);font-size:44px;letter-spacing:.06em;
+  color:var(--red-800);line-height:1.1;
+}
+.big-date small{font-size:17px;letter-spacing:.1em;margin-left:4px;}
+.date-sub{
+  margin-top:12px;font-size:12.5px;letter-spacing:.2em;text-indent:.2em;
+  color:var(--ink-2);
+}
+.date-lunar{
+  margin-top:10px;font-family:var(--kai);font-size:12px;
+  color:var(--gold-dk);letter-spacing:.16em;
+}
+.time-tag{
+  display:inline-block;margin-top:20px;padding:8px 22px;
+  border:1px solid var(--line);border-radius:999px;
+  font-size:13px;letter-spacing:.18em;text-indent:.18em;color:var(--red-700);
+}
+.hotel{
+  font-size:19px;letter-spacing:.1em;color:var(--ink);line-height:1.5;
+}
+.hotel-sub{
+  margin-top:10px;font-size:13px;color:var(--ink-2);line-height:1.8;
+  letter-spacing:.02em;
+}
+.btn-map{
+  display:inline-flex;align-items:center;gap:7px;
+  margin-top:22px;padding:11px 28px;border-radius:999px;
+  background:linear-gradient(135deg,var(--red-700),var(--red-900));
+  color:#FBF3E2;font-size:13px;letter-spacing:.16em;text-indent:.16em;
+  text-decoration:none;border:none;cursor:pointer;
+}
+.btn-map:active{opacity:.86;}
+.btn-map svg{width:14px;height:14px;fill:#FBF3E2;}
+
+/* ---------- 提醒 ---------- */
+.tips{display:flex;flex-direction:column;gap:14px;}
+.tip{
+  display:flex;gap:13px;align-items:flex-start;
+  font-family:var(--kai);font-size:13.5px;line-height:1.85;
+  color:var(--ink-2);
+}
+.tip .dot{
+  flex:0 0 5px;width:5px;height:5px;margin-top:8px;
+  background:var(--gold);transform:rotate(45deg);
+}
+.tip b{color:var(--ink);font-weight:normal;}
+
+/* ---------- 落款 ---------- */
+.signoff{
+  padding:70px 30px 54px;text-align:center;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(255,222,160,.1) 0%, transparent 65%),
+    linear-gradient(160deg,#7A0F1A,#5E0A11 62%,#460710);
+  position:relative;
+}
+.signoff .xi-l{
+  font-size:46px;line-height:1;
+  color:transparent;
+  background:linear-gradient(175deg,#F3E0B0,#C9A961 52%,#A5822F);
+  -webkit-background-clip:text;background-clip:text;
+}
+.signoff .line{
+  width:52px;height:1px;background:var(--line);margin:26px auto;
+}
+.signoff .who{
+  font-size:19px;letter-spacing:.28em;text-indent:.28em;color:#FBF3E2;
+}
+.signoff .dot-line{
+  margin-top:14px;font-size:10px;letter-spacing:.3em;text-indent:.3em;
+  color:rgba(232,210,160,.55);
+}
+.signoff .fin{
+  margin-top:30px;font-family:var(--kai);font-size:11.5px;
+  letter-spacing:.22em;text-indent:.22em;color:rgba(232,210,160,.42);
+}
+
+/* ---------- 滚动入场 ---------- */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.3,1);}
+.reveal.in{opacity:1;transform:none;}
+body.locked{overflow:hidden;height:100svh;}
+</style>
+</head>
+<body class="locked">
+
+<!-- ============ 开场遮罩 ============ -->
+<div class="veil" id="veil">
+  <div class="veil-frame"><span></span><span></span><span></span><span></span></div>
+  <div class="veil-inner">
+    <div class="xi">囍</div>
+    <div class="veil-sub">婚礼邀请函</div>
+    <div class="veil-date">2026 · 10 · 11</div>
+    <button class="open-btn" id="openBtn">打开请柬</button>
+  </div>
+</div>
+
+<div class="stage">
+
+  <!-- ============ 封面 ============ -->
+  <header class="cover">
+    <div class="cover-glyph g1">囍</div>
+    <div class="cover-ring r1"></div>
+    <div class="cover-ring r2"></div>
+
+    <div class="cover-content">
+      <div class="eyebrow">WEDDING INVITATION</div>
+      <div class="names">
+        <div class="nm">黄思奇</div>
+        <div class="amp">&amp;</div>
+        <div class="nm">刘帆</div>
+      </div>
+      <div class="cover-rule"><i></i><b></b><i></i></div>
+      <div class="cover-date">2026 . 10 . 11</div>
+      <div class="cover-lunar">农历 九月初二</div>
+      <div class="cover-venue">湖南 · 岳阳 泰和酒店 三宴会厅</div>
+    </div>
+
+    <div class="scroll-hint">
+      <span>向下滑动</span>
+      <i></i>
+    </div>
+  </header>
+
+  <!-- ============ 婚礼动画影片 ============ -->
+  <section class="filmic">
+    <video id="film" src="assets/wedding-movie.mp4" poster="assets/movie-poster.jpg"
+           autoplay muted loop playsinline webkit-playsinline preload="auto"></video>
+    <button class="snd" id="sndBtn" type="button" aria-label="声音开关">
+      <svg class="off" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M5 9.5v5h3.2l4 3.2V6.3L8.2 9.5H5z"/>
+        <path d="M15.6 9.6l5 4.8M20.6 9.6l-5 4.8" fill="none"/>
+      </svg>
+      <svg class="on" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M5 9.5v5h3.2l4 3.2V6.3L8.2 9.5H5z"/>
+        <path d="M15.4 9.3a4.2 4.2 0 010 5.4M17.9 6.8a7.8 7.8 0 010 10.4" fill="none"/>
+      </svg>
+    </button>
+    <button class="film-play" id="filmPlay" type="button" aria-label="播放影片">
+      <i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.2v13.6L19 12z"/></svg></i>
+      <span>点击播放</span>
+    </button>
+  </section>
+
+  <!-- ============ 邀请语 ============ -->
+  <section class="sec cream">
+    <div class="sec-title reveal">
+      <div class="cn">诚挚邀请</div>
+      <div class="en">INVITATION</div>
+      <div class="deco"><i></i><b></b><i></i></div>
+    </div>
+    <div class="invite-text reveal">
+      <span class="who">亲爱的亲朋好友：</span>
+      谨定于 <span class="hl">2026 年 10 月 11 日（星期日）</span>，我们将在
+      <span class="hl">湖南 · 岳阳 泰和酒店 三宴会厅</span> 举行婚礼。
+      诚邀您与家人一同前来，见证我们的幸福时刻，
+      与我们共度这温暖而欢喜的一天。
+    </div>
+    <div class="quote reveal">
+      执子之手，与子偕老<br>
+      余生漫漫，愿有你同行
+    </div>
+  </section>
+
+  <!-- ============ 新人 ============ -->
+  <section class="sec tint">
+    <div class="sec-title reveal">
+      <div class="cn">新人介绍</div>
+      <div class="en">THE COUPLE</div>
+      <div class="deco"><i></i><b></b><i></i></div>
+    </div>
+    <div class="couple">
+      <div class="person reveal">
+        <div class="avatar"><img src="assets/groom.jpg" alt="新郎 黄思奇"></div>
+        <div class="person-info">
+          <div class="role">G R O O M</div>
+          <div class="nm">黄思奇</div>
+        </div>
+      </div>
+      <div class="person reveal">
+        <div class="avatar"><img src="assets/bride.jpg" alt="新娘 刘帆"></div>
+        <div class="person-info">
+          <div class="role">B R I D E</div>
+          <div class="nm">刘帆</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 时间 ============ -->
+  <section class="sec cream">
+    <div class="sec-title reveal">
+      <div class="cn">婚礼时间</div>
+      <div class="en">THE DATE</div>
+      <div class="deco"><i></i><b></b><i></i></div>
+    </div>
+    <div class="card reveal">
+      <div class="big-date">10.11<small>2026</small></div>
+      <div class="date-sub">星期日 · 午宴</div>
+      <div class="date-lunar">农历 九月初二</div>
+      <div class="time-tag">12 : 18 开席</div>
+    </div>
+  </section>
+
+  <!-- ============ 地点 ============ -->
+  <section class="sec tint">
+    <div class="sec-title reveal">
+      <div class="cn">婚礼地点</div>
+      <div class="en">THE VENUE</div>
+      <div class="deco"><i></i><b></b><i></i></div>
+    </div>
+    <div class="card reveal">
+      <div class="hotel"><!-- HOTEL_NAME -->泰和酒店<br>三宴会厅</div>
+      <div class="hotel-sub"><!-- HOTEL_ADDR -->湖南省岳阳市</div>
+      <a class="btn-map" href="https://uri.amap.com/search?keyword=%E6%B3%B0%E5%92%8C%E9%85%92%E5%BA%97&amp;city=%E5%B2%B3%E9%98%B3" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+        一键导航
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ 温馨提示 ============ -->
+  <section class="sec cream">
+    <div class="sec-title reveal">
+      <div class="cn">温馨提示</div>
+      <div class="en">KINDLY NOTE</div>
+      <div class="deco"><i></i><b></b><i></i></div>
+    </div>
+    <div class="tips reveal">
+      <div class="tip"><span class="dot"></span><span><b>请提前到场。</b>建议您 11:30 前抵达，方便找到座位。</span></div>
+      <div class="tip"><span class="dot"></span><span><b>携带家人。</b>非常欢迎您带上家人一同前来。</span></div>
+    </div>
+  </section>
+
+  <!-- ============ 落款 ============ -->
+  <footer class="signoff">
+    <div class="xi-l">囍</div>
+    <div class="line"></div>
+    <div class="who">黄思奇 &nbsp;&amp;&nbsp; 刘帆</div>
+    <div class="dot-line">敬 邀</div>
+    <div class="fin">2026.10.11 · 湖南 岳阳</div>
+  </footer>
+
+</div>
+
+<script>
+/* ---------- 开场 ---------- */
+(function(){
+  var veil = document.getElementById('veil');
+  var btn  = document.getElementById('openBtn');
+  btn.addEventListener('click', function(){
+    if(window.__unlockAudio) window.__unlockAudio();   // 借这一下点击解锁声音
+    veil.classList.add('up');
+    document.body.classList.remove('locked');
+    window.scrollTo(0,0);
+    setTimeout(function(){ veil.style.display = 'none'; }, 1400);
+  });
+})();
+
+/* ---------- 滚动入场 ---------- */
+(function(){
+  var els = document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){
+    els.forEach(function(el){ el.classList.add('in'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+  els.forEach(function(el, i){
+    el.style.transitionDelay = (Math.min(i,6) * 60) + 'ms';
+    io.observe(el);
+  });
+})();
+
+/* ---------- 影片：滚到这一屏自动播放（带兜底） ---------- */
+(function(){
+  var v = document.getElementById('film');
+  var box = document.querySelector('.filmic');
+  var play = document.getElementById('filmPlay');
+  var snd = document.getElementById('sndBtn');
+  if(!v || !box) return;
+
+  function showFallback(){ box.classList.add('failed'); }
+  function hideFallback(){ box.classList.remove('failed'); }
+  function setSoundUI(){ if(snd) snd.classList.toggle('on', !v.muted); }
+
+  /* 借用户手势解锁音频：静默试播一次，之后即可带声自动播放 */
+  var unlocked = false;
+  function unlockAudio(){
+    if(unlocked) return;
+    unlocked = true;
+    v.volume = 0; v.muted = false;
+    var restore = function(){ try{ v.pause(); v.currentTime = 0; }catch(e){} v.volume = 1; setSoundUI(); };
+    var p = v.play();
+    if(p && p.then){
+      p.then(restore).catch(function(){ v.muted = true; v.volume = 1; setSoundUI(); });
+    } else { restore(); }
+  }
+  window.__unlockAudio = unlockAudio;
+  // 兜底：页面任意首次触摸/点击也解锁（例如用户直接滑过遮罩的情况）
+  document.addEventListener('touchstart', unlockAudio, { once: true, passive: true });
+  document.addEventListener('click', unlockAudio, { once: true });
+
+  function tryPlay(){
+    var p = v.play();
+    if(p && p.then){
+      p.then(hideFallback).catch(showFallback);
+    } else {
+      hideFallback();
+    }
+    // 双保险：2.6 秒后仍未播放就亮出按钮
+    setTimeout(function(){ if(v.paused) showFallback(); }, 2600);
+  }
+
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting) tryPlay(); });
+    }, { threshold: 0.3 });
+    io.observe(box);
+  } else {
+    tryPlay();
+  }
+
+  // 大播放按钮：点一下同时开画面和声音
+  if(play){
+    play.addEventListener('click', function(){
+      v.muted = false;
+      setSoundUI();
+      hideFallback();
+      var p = v.play();
+      if(p && p.catch) p.catch(function(){});
+    });
+  }
+  // 点视频本身也当作一次交互，尝试播放
+  v.addEventListener('click', function(){
+    if(v.paused){
+      var p = v.play();
+      if(p && p.catch) p.catch(function(){});
+    }
+  });
+  // 声音开关
+  if(snd){
+    snd.addEventListener('click', function(){
+      v.muted = !v.muted;
+      setSoundUI();
+      if(!v.muted){
+        var p = v.play();
+        if(p && p.catch) p.catch(function(){});
+      }
+    });
+  }
+  setSoundUI();
+})();
+
+</script>
+</body>
+</html>
